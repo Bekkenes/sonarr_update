@@ -4,7 +4,7 @@ There are many ways of doing it, but i wrote a simple script to update my own lx
 
 What it does it as follows:
 1) Stops the sonarr service.
-2) Prompts you to imput the version number (ie, if version showing in webgui is 4.0.8.2008, you enter 0.8.2008.
+2) Prompts you to input the version number (ie, if version showing in webgui is 4.0.8.2008, you enter 0.8.2008.
 3) Wgets the file.
 4) Unpacks file it into a Sonarr folder in the scripts folder.
 5) The sonarr service will be started again
