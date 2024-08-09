@@ -10,6 +10,6 @@ What it does it as follows:
 5) The sonarr service will be started again
 6) The downloaded file and the scripts Sonarr folder will be removed.
 
-#How to run
-Make the script executable by running chmod +x update_sonarr.sh.
-Execute the script by running ./update_sonarr.sh.
+How to run
+1) Make the script executable by running chmod +x update_sonarr.sh.
+2) Execute the script by running ./update_sonarr.sh.
