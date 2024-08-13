@@ -1,15 +1,61 @@
-# sonarr_update
-Simple bashscript for updating sonarr.
-There are many ways of doing it, but i wrote a simple script to update my own lxc container.
+Sonarr Update Script
+This script automates the process of updating Sonarr to a specified version. It stops the Sonarr service, downloads the specified version, extracts the files, copies them to the appropriate directory, restarts the service, and cleans up the downloaded files. The script also provides progress updates with color-coded messages.
 
-What it does it as follows:
-1) Stops the sonarr service.
-2) Prompts you to input the version number (ie, if version showing in webgui is 4.0.8.2008, you enter 0.8.2008.
-3) Wgets the file.
-4) Unpacks file it into a Sonarr folder in the scripts folder.
-5) The sonarr service will be started again
-6) The downloaded file and the scripts Sonarr folder will be removed.
+Prerequisites
+Ensure you have wget, tar, and systemctl installed on your system.
+The user running the script must have sudo privileges.
+How to Use
+Clone the Repository:
+git clone https://github.com/yourusername/sonarr-update-script.git
+cd sonarr-update-script
 
-How to run
-1) Make the script executable by running chmod +x update_sonarr.sh.
-2) Execute the script by running ./update_sonarr.sh.
+Make the script(s) Executable:
+chmod +x update*.sh
+The above command makes all scripts executable, but you can do it one by one based on filenames.
+
+Run the Script:
+
+Basic script
+./update_sonarr.sh
+
+Script with color:
+./update_sonarr_v2.sh
+Script with color for non root user:
+./update_sonarr_v2_non_admin.sh
+
+Follow the Prompts:
+Enter the version number when prompted (e.g., 0.8.2008).
+Script Details
+The script performs the following steps:
+
+Stops the Sonarr service.
+Prompts the user to input the version number.
+Downloads the specified version of Sonarr.
+Extracts the downloaded file.
+Copies the extracted files to the Sonarr directory.
+Restarts the Sonarr service.
+Waits for 3 seconds.
+Cleans up the downloaded and extracted files.
+Color Codes
+In Progress: Yellow
+Success: Green
+Failed: Red
+Example Output
+In progress: Stopping the Sonarr service
+Success: Sonarr service stopped
+In progress: Downloading Sonarr version 4.0.8.2008
+Success: Downloaded Sonarr version 4.0.8.2008
+In progress: Extracting Sonarr.develop.4.0.8.2008.linux-x64.tar.gz
+Success: Extracted Sonarr.develop.4.0.8.2008.linux-x64.tar.gz
+In progress: Copying files to /usr/lib/sonarr/bin
+Success: Copied files to /usr/lib/sonarr/bin
+In progress: Restarting the Sonarr service
+Success: Sonarr service restarted
+In progress: Waiting for 3 seconds
+Success: Waited for 3 seconds
+In progress: Cleaning up files
+Success: Cleaned up files
+Update completed.
+
+License
+This project is licensed under the MPL-2.0 license - see the LICENSE file for details.
