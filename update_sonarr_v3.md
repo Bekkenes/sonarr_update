@@ -23,7 +23,7 @@ This Bash script updates Sonarr by downloading a specified release version from 
   - `cp`
   - `rm`
 - GitHub release files should follow the naming convention:  
-  `Sonarr.develop.4.<version>.linux-x64.tar.gz`
+  `Sonarr.main.4.<version>.linux-x64.tar.gz` (stable) or `Sonarr.develop.4.<version>.linux-x64.tar.gz` (develop) – the script tries both
 
 ## Usage
 

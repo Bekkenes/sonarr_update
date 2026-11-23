@@ -12,8 +12,8 @@ This script automates the process of updating Sonarr to a specified version. It 
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/bekkenes/sonarr-update-script.git
-   cd sonarr-update-script
+   git clone https://github.com/Bekkenes/sonarr_update.git
+   cd sonarr_update
    ```
 
 2. **Make the Scripts Executable:**
